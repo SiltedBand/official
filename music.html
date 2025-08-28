@@ -4,9 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Silted - Music</title>
-
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-
   <style>
     @font-face {
       font-family: 'DaisyWheel';
@@ -20,14 +17,13 @@
     }
 
     body {
-      height: 100vh;
+      min-height: 100vh;
       width: 100%;
       display: flex;
       flex-direction: column;
       background-color: #000;
       color: #fff;
       font-family: 'DaisyWheel', monospace;
-      overflow: hidden;
     }
 
     header {
@@ -62,25 +58,32 @@
       color: #999;
     }
 
+    /* Conteúdo principal */
     .content {
       flex: 1;
       display: flex;
       justify-content: center;
       align-items: center;
       gap: 50px;
-      padding: 0 40px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+      flex-wrap: wrap;
     }
 
+    /* Lado esquerdo */
     .left {
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 15px;
+      max-width: 100%;
     }
 
     .left img {
-      width: 350px;
-      height: 350px;
+      width: 100%;
+      max-width: 320px;
+      height: auto;
       border-radius: 12px;
       box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
     }
@@ -88,6 +91,8 @@
     .buttons {
       display: flex;
       gap: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
     }
 
     .buttons a {
@@ -97,7 +102,7 @@
       color: #000;
       border-radius: 8px;
       font-weight: bold;
-      font-size: 18px;
+      font-size: 16px;
       transition: transform 0.3s ease, background-color 0.3s ease;
     }
 
@@ -115,28 +120,93 @@
       background-color: #528c98;
     }
 
+    /* Lado direito */
     .right {
       display: flex;
       flex-direction: column;
       gap: 20px;
       align-items: center;
+      max-width: 100%;
     }
 
     .right iframe {
+      width: 100%;
+      max-width: 400px;
       border-radius: 12px;
       box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
     }
 
     .release-date {
-      font-size: 18px;
+      font-size: 16px;
       color: #aaa;
+      text-align: center;
     }
 
+    /* Rodapé */
     footer {
       background-color: #111;
       text-align: center;
-      padding: 10px;
+      padding: 15px;
       font-size: 12px;
+    }
+
+    .social-icons {
+      margin-bottom: 10px;
+    }
+
+    .social-icons a {
+      margin: 0 8px;
+      display: inline-block;
+    }
+
+    .social-icons img {
+      width: 35px;
+      height: 35px;
+      filter: invert(0);
+      transition: transform 0.3s ease, filter 0.3s ease;
+    }
+
+    .social-icons img:hover {
+      transform: scale(1.2);
+      filter: brightness(0.7);
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 36px;
+      }
+
+      nav a {
+        font-size: 18px;
+      }
+
+      .content {
+        flex-direction: column;
+        gap: 30px;
+      }
+
+      .buttons a {
+        font-size: 14px;
+        padding: 8px 16px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 28px;
+      }
+
+      nav {
+        position: static;
+        transform: none;
+        margin-top: 10px;
+      }
+
+      nav a {
+        margin: 0 10px;
+        font-size: 16px;
+      }
     }
   </style>
 </head>
@@ -151,16 +221,16 @@
 
   <div class="content">
     <div class="left">
-      <img src="Sore.png" alt="Album Cover">
+      <img src="sore.png" alt="Album Cover">
       <div class="buttons">
-        <a href="https://open.spotify.com/intl-pt/album/6lP4G8UEcskhhuHKZ9f0sz?si=EUzaK743TgGWA2cFK_PCbQ" target="_blank">Listen on Spotify</a>
-        <a href="https://silted.bandcamp.com/track/sore" target="_blank" class="bandcamp">Listen on Bandcamp</a>
+        <a href="https://open.spotify.com/album/6lP4G8UEcskhhuHKZ9f0sz" target="_blank">Listen on Spotify</a>
+        <a href="https://silted.bandcamp.com/" target="_blank" class="bandcamp">Listen on Bandcamp</a>
       </div>
     </div>
 
     <div class="right">
       <iframe src="https://open.spotify.com/embed/album/6lP4G8UEcskhhuHKZ9f0sz?utm_source=generator"
-        width="400" height="352" frameborder="0" allowfullscreen
+        height="352" frameborder="0" allowfullscreen
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
         loading="lazy"></iframe>
       <div class="release-date">Release Date: August 20, 2025</div>
@@ -168,6 +238,11 @@
   </div>
 
   <footer>
+    <div class="social-icons">
+      <a href="https://silted.bandcamp.com/" target="_blank"><img src="bandcamp.png" alt="Bandcamp"></a>
+      <a href="https://open.spotify.com/artist/5c4UJXX2CJxEQjV8RmpJdv" target="_blank"><img src="spotify.png" alt="Spotify"></a>
+      <a href="https://instagram.com/siltedband" target="_blank"><img src="instagram.png" alt="Instagram"></a>
+    </div>
     <p>2025 Silted. All rights reserved.</p>
   </footer>
 </body>
