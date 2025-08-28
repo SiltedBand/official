@@ -10,12 +10,6 @@
       src: url('DaisyWheel.otf') format('opentype');
     }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
       margin: 0;
       padding: 0;
@@ -28,10 +22,9 @@
     }
 
     header {
+      position: relative;
       padding: 20px 40px;
       text-align: center;
-      flex-shrink: 0;
-      position: relative;
     }
 
     header h1 {
@@ -41,14 +34,13 @@
     }
 
     nav {
-      position: absolute;
-      top: 50%;
-      right: 40px;
-      transform: translateY(-50%);
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
     }
 
     nav a {
-      margin-left: 20px;
       text-decoration: none;
       color: #fff;
       font-size: 25px;
@@ -67,28 +59,45 @@
       justify-content: center;
       align-items: center;
       text-align: center;
-      padding: 0 10px;
+      padding: 0 15px;
+    }
+
+    main h1 {
+      font-size: 26px;
+      margin-bottom: 15px;
+    }
+
+    main h2 {
+      font-size: 22px;
+      margin-bottom: 15px;
+    }
+
+    main h4 {
+      font-size: 16px;
+      max-width: 700px;
+      line-height: 1.8; /* mais espaçamento entre linhas */
+      margin-bottom: 60px; /* mais espaço antes das redes sociais */
     }
 
     .social-icons {
-      margin-top: 145px;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
+      margin-bottom: 30px; /* aproxima do rodapé */
     }
 
     .social-icons a {
+      margin: 0 15px;
       display: inline-block;
     }
 
     img.icon {
-      width: 45px;
-      height: 45px;
-      transition: transform 0.3s ease;
+      width: 40px;
+      height: 40px;
+      filter: invert(0);
+      transition: transform 0.3s ease, filter 0.3s ease;
     }
 
     img.icon:hover {
       transform: scale(1.3);
+      filter: brightness(0.7);
     }
 
     footer {
@@ -96,51 +105,30 @@
       text-align: center;
       padding: 10px;
       font-size: 12px;
-      flex-shrink: 0;
     }
 
     @media (max-width: 768px) {
-      header {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 20px;
-      }
-
       header h1 {
-        font-size: 42px;
-      }
-
-      nav {
-        position: static;
-        transform: none;
-        margin-top: 10px;
+        font-size: 48px;
       }
 
       nav a {
-        margin: 0 12px;
-        font-size: 20px;
+        font-size: 22px;
       }
 
-      .social-icons {
-        margin-top: 80px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      header h1 {
-        font-size: 34px;
-        letter-spacing: 6px;
+      main h1 {
+        font-size: 22px;
       }
 
-      nav a {
-        margin: 0 10px;
-        font-size: 18px;
+      main h4 {
+        font-size: 14px;
+        line-height: 1.7;
+        padding: 0 10px;
       }
 
-      .social-icons img {
-        width: 40px;
-        height: 40px;
+      img.icon {
+        width: 36px;
+        height: 36px;
       }
     }
   </style>
@@ -150,7 +138,7 @@
     <h1>SILTED</h1>
     <nav>
       <a href="music.html">MUSIC</a>
-      <a href="contact.html">CONTACT</a>
+      <a href="#contact">CONTACT</a>
     </nav>
   </header>
 
@@ -158,19 +146,19 @@
     <h1>WELCOME TO OFFICIAL SILTED PAGE!</h1>
     <h2>About the band</h2>
     <h4>
-      Silted is a Brazilian Grunge, Post-Grunge and Nu-metal band with influences from<br>
+      Silted is a Brazilian Grunge, Post-Grunge and Nu-metal band with influences from
       bands such as Green Day, Nirvana, HUM, Sap, Silverchair and Senium.
     </h4>
 
     <div class="social-icons">
       <a href="https://silted.bandcamp.com/" target="_blank">
-        <img src="bandcamp.png" class="icon" alt="Bandcamp">
+        <img src="bandcamp.png" class="icon">
       </a>
       <a href="https://open.spotify.com/intl-pt/artist/5c4UJXX2CJxEQjV8RmpJdv" target="_blank">
-        <img src="spotify.png" class="icon" alt="Spotify">
+        <img src="spotify.png" class="icon">
       </a>
       <a href="https://instagram.com/siltedband" target="_blank">
-        <img src="instagram.png" class="icon" alt="Instagram">
+        <img src="instagram.png" class="icon">
       </a>
     </div>
   </main>
