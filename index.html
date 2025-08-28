@@ -22,8 +22,8 @@
     }
 
     header {
-      position: relative;
       padding: 25px 40px;
+      position: relative;
     }
 
     header h1 {
@@ -112,7 +112,7 @@
       }
 
       nav a {
-        font-size: 22px;
+        font-size: 18px;
       }
 
       main h1 {
@@ -130,6 +130,23 @@
         height: 35px;
       }
     }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 28px;
+      }
+
+      nav {
+        position: static;
+        transform: none;
+        margin-top: 10px;
+      }
+
+      nav a {
+        margin: 0 10px;
+        font-size: 16px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -137,7 +154,7 @@
     <h1>SILTED</h1>
     <nav>
       <a href="music.html">MUSIC</a>
-      <a href="#contact">CONTACT</a>
+      <a href="contact.html">CONTACT</a>
     </nav>
   </header>
 
