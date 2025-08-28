@@ -58,7 +58,6 @@
       color: #999;
     }
 
-    /* Conteúdo principal */
     .content {
       flex: 1;
       display: flex;
@@ -71,7 +70,6 @@
       flex-wrap: wrap;
     }
 
-    /* Lado esquerdo */
     .left {
       display: flex;
       flex-direction: column;
@@ -85,7 +83,6 @@
       max-width: 320px;
       height: auto;
       border-radius: 12px;
-      box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
     }
 
     .buttons {
@@ -93,6 +90,7 @@
       gap: 15px;
       flex-wrap: wrap;
       justify-content: center;
+      margin-bottom: 15px;
     }
 
     .buttons a {
@@ -120,7 +118,27 @@
       background-color: #528c98;
     }
 
-    /* Lado direito */
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 10px;
+    }
+
+    .social-icons a {
+      display: inline-block;
+    }
+
+    .social-icons img {
+      width: 35px;
+      height: 35px;
+      transition: transform 0.3s ease;
+    }
+
+    .social-icons img:hover {
+      transform: scale(1.2);
+    }
+
     .right {
       display: flex;
       flex-direction: column;
@@ -133,7 +151,6 @@
       width: 100%;
       max-width: 400px;
       border-radius: 12px;
-      box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
     }
 
     .release-date {
@@ -142,7 +159,6 @@
       text-align: center;
     }
 
-    /* Rodapé */
     footer {
       background-color: #111;
       text-align: center;
@@ -150,28 +166,6 @@
       font-size: 12px;
     }
 
-    .social-icons {
-      margin-bottom: 10px;
-    }
-
-    .social-icons a {
-      margin: 0 8px;
-      display: inline-block;
-    }
-
-    .social-icons img {
-      width: 35px;
-      height: 35px;
-      filter: invert(0);
-      transition: transform 0.3s ease, filter 0.3s ease;
-    }
-
-    .social-icons img:hover {
-      transform: scale(1.2);
-      filter: brightness(0.7);
-    }
-
-    /* Responsividade */
     @media (max-width: 768px) {
       header h1 {
         font-size: 36px;
@@ -237,12 +231,13 @@
     </div>
   </div>
 
+  <div class="social-icons">
+    <a href="https://silted.bandcamp.com/" target="_blank"><img src="bandcamp.png" alt="Bandcamp"></a>
+    <a href="https://open.spotify.com/artist/5c4UJXX2CJxEQjV8RmpJdv" target="_blank"><img src="spotify.png" alt="Spotify"></a>
+    <a href="https://instagram.com/siltedband" target="_blank"><img src="instagram.png" alt="Instagram"></a>
+  </div>
+
   <footer>
-    <div class="social-icons">
-      <a href="https://silted.bandcamp.com/" target="_blank"><img src="bandcamp.png" alt="Bandcamp"></a>
-      <a href="https://open.spotify.com/artist/5c4UJXX2CJxEQjV8RmpJdv" target="_blank"><img src="spotify.png" alt="Spotify"></a>
-      <a href="https://instagram.com/siltedband" target="_blank"><img src="instagram.png" alt="Instagram"></a>
-    </div>
     <p>2025 Silted. All rights reserved.</p>
   </footer>
 </body>
